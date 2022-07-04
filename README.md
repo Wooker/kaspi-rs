@@ -4,5 +4,5 @@ Types to use in kaspi-service
 ----
 
 TODO:
-	- [ ] Add kaspi API handlers
-	- [ ] Add custom Error types
+- [ ] Add kaspi API handlers
+- [ ] Add custom Error types
