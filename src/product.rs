@@ -40,6 +40,12 @@ impl Product {
     pub fn sku(&self) -> String {
         self.sku.clone()
     }
+
+    pub fn set_id(&mut self) -> &Self {
+        self.id = Some(Uuid::new_v4());
+
+        self
+    }
 }
 
 impl fmt::Display for Product {
