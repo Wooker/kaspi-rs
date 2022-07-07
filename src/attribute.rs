@@ -12,5 +12,5 @@ pub struct KaspiCategoryAttribute {
 #[derive(Serialize, Deserialize, Debug)]
 pub struct AttributeValue {
     pub code: String,
-    pub name: String,
+    pub value: String,
 }
