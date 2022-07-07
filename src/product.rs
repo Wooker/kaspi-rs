@@ -1,5 +1,8 @@
 use serde::{Deserialize, Serialize};
-use crate::attribute::AttributeValue;
+use crate::{
+    attribute::AttributeValue,
+    upload_result::UploadResult,
+};
 use std::fmt;
 
 /*
@@ -25,7 +28,10 @@ pub struct Product {
     category: String,
     description: String,
     attributes: Vec<AttributeValue>,
-    images: Vec<ProductImage>
+    images: Vec<ProductImage>,
+    code: String,
+    status: String,
+    result: Option<UploadResult>,
 }
 
 impl Product {
