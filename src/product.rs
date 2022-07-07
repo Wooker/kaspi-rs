@@ -23,7 +23,7 @@ struct ProductImage {
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Product {
-    id: Uuid,
+    id: Option<Uuid>,
     sku: String,
     title: String,
     brand: String,
