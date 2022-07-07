@@ -3,6 +3,7 @@ use crate::{
     attribute::AttributeValue,
     upload_result::UploadResult,
 };
+use uuid::Uuid;
 use std::fmt;
 
 /*
@@ -22,6 +23,7 @@ struct ProductImage {
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Product {
+    id: Uuid,
     sku: String,
     title: String,
     brand: String,
