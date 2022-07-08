@@ -1,4 +1,5 @@
 use serde::{Deserialize, Serialize};
+use serde_json::Value;
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct UploadStatus {
@@ -8,9 +9,9 @@ pub struct UploadStatus {
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct UploadResult {
-    errors: Option<Vec<String>>,
-    warnings: Option<Vec<String>>,
-    skipped: Option<Vec<String>>,
-    total: Option<Vec<String>>,
-    result: Option<Vec<String>>,
+    errors: usize,
+    warnings: usize,
+    skipped: usize,
+    total: usize,
+    result: serde_json::Value,
 }

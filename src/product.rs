@@ -31,8 +31,8 @@ pub struct Product {
     description: String,
     attributes: Vec<AttributeValue>,
     images: Vec<ProductImage>,
-    code: String,
-    status: String,
+    code: Option<String>,
+    status: Option<String>,
     result: Option<UploadResult>,
 }
 
