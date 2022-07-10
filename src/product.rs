@@ -41,15 +41,36 @@ impl Product {
         self.sku.clone()
     }
 
-    pub fn set_id(&mut self) -> &Self {
+    pub fn set_id(&mut self) {
         self.id = Some(Uuid::new_v4());
-
-        self
     }
 }
 
 impl fmt::Display for Product {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         write!(f, "{:?}", self)
+    }
+}
+
+mod tests {
+    use super::Product;
+
+    #[test]
+    fn set_uuid() {
+        let mut p = Product {
+            id: None,
+            sku: String::from(""),
+            title: String::from(""),
+            brand: String::from(""),
+            category: String::from(""),
+            description: String::from(""),
+            attributes: vec![],
+            images: vec![],
+            code: None,
+            status: None,
+            result: None,
+        };
+        p.set_id();
+        assert_eq!(p.id.is_some(), true);
     }
 }
